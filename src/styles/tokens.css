@@ -1,0 +1,32 @@
+:root {
+  color-scheme: dark;
+  --font-display: "Space Grotesk", "HarmonyOS Sans SC", "Noto Sans SC", sans-serif;
+  --font-body: "Satoshi", "Noto Sans SC", "Microsoft YaHei UI", sans-serif;
+  --font-mono: "JetBrains Mono", "Cascadia Code", ui-monospace, SFMono-Regular, monospace;
+
+  --bg-0: #05090b;
+  --bg-1: #071014;
+  --bg-2: #0b1d21;
+  --surface-0: rgba(9, 24, 29, 0.72);
+  --surface-1: rgba(17, 41, 47, 0.82);
+  --surface-2: rgba(229, 255, 244, 0.08);
+  --text-0: #f0fff8;
+  --text-1: #c6e0d7;
+  --text-2: #7fa29a;
+  --line: rgba(168, 255, 222, 0.2);
+  --line-strong: rgba(127, 255, 216, 0.42);
+  --accent: #42ffd2;
+  --accent-2: #f4d35e;
+  --accent-3: #ff7a59;
+  --success: #9eff8f;
+  --shadow: 0 24px 80px rgba(0, 0, 0, 0.42);
+  --glow: 0 0 32px rgba(66, 255, 210, 0.26);
+
+  --container: min(1160px, calc(100vw - 40px));
+  --radius-lg: 32px;
+  --radius-md: 22px;
+  --radius-sm: 14px;
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --duration-slow: 900ms;
+  --duration: 420ms;
+}
