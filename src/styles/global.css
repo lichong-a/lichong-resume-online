@@ -96,6 +96,11 @@ li {
   will-change: opacity, transform;
 }
 
+.split-line-mask {
+  padding-bottom: 0.1em;
+  margin-bottom: -0.04em;
+}
+
 .site-header {
   position: sticky;
   top: 16px;
@@ -247,7 +252,7 @@ li {
   margin: 18px 0 22px;
   font-family: var(--font-display);
   font-size: clamp(3.2rem, 7vw, 6.3rem);
-  line-height: 1.02;
+  line-height: 1.08;
   letter-spacing: -0.055em;
 }
 
@@ -1140,7 +1145,7 @@ li {
 
   .hero-copy h1 {
     font-size: clamp(2.7rem, 12.4vw, 4.2rem);
-    line-height: 1.06;
+    line-height: 1.1;
   }
 
   .hero-insights {
