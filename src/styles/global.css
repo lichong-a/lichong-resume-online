@@ -243,12 +243,12 @@ li {
 }
 
 .hero-copy h1 {
-  max-width: 620px;
+  max-width: 660px;
   margin: 18px 0 22px;
   font-family: var(--font-display);
-  font-size: clamp(3.6rem, 8vw, 7rem);
-  line-height: 0.92;
-  letter-spacing: -0.06em;
+  font-size: clamp(3.2rem, 7vw, 6.3rem);
+  line-height: 1.02;
+  letter-spacing: -0.055em;
 }
 
 .hero-summary {
@@ -1139,7 +1139,8 @@ li {
   }
 
   .hero-copy h1 {
-    font-size: clamp(3rem, 15vw, 4.8rem);
+    font-size: clamp(2.7rem, 12.4vw, 4.2rem);
+    line-height: 1.06;
   }
 
   .hero-insights {
