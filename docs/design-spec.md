@@ -32,10 +32,12 @@ Primary conversion: start a conversation via `mail@lichong.work` or inspect the 
 
 ## Motion Rules
 
-- Page load: hero copy slides up, orbit fades/scales in.
-- Ambient: particles float, orbit rings rotate, code stream moves slowly.
+- Page load: hero copy slides up, orbit fades/scales in, and GSAP SplitText reveals the hero headline by masked lines on desktop.
+- Scroll scenes: GSAP ScrollTrigger drives staggered section/card reveals, subtle hero/particle parallax, the work timeline progress rail, and Agent Loop node highlighting.
+- Anchor motion: in-page navigation uses ScrollToPlugin for smooth, offset-aware scrolling when motion is allowed.
+- Mobile: no pinning, horizontal scroll scenes, or large scrub transforms; mobile keeps short `autoAlpha + y <= 24px` reveals only.
 - Interaction: buttons/cards lift slightly on hover/focus; hero insight prompts reveal glowing detail tooltips on hover or keyboard focus.
-- Reduced motion: all animations and transitions collapse to near-zero duration while preserving layout and information.
+- Reduced motion: GSAP scroll scenes are skipped, CSS animations and transitions collapse to near-zero duration, and all content remains visible.
 
 ## Responsive Rules
 

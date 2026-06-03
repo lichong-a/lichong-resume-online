@@ -12,7 +12,12 @@ export function SkillMatrix() {
       />
       <div className="skill-grid">
         {profile.skills.map((cluster, index) => (
-          <article className="skill-card reveal-card" style={{ animationDelay: `${index * 80}ms` }} key={cluster.title}>
+          <article
+            className="skill-card reveal-card"
+            data-motion="reveal-card"
+            style={{ animationDelay: `${index * 80}ms` }}
+            key={cluster.title}
+          >
             <div className="skill-card-index">{String(index + 1).padStart(2, '0')}</div>
             <h3>{cluster.title}</h3>
             <p>{cluster.signal}</p>
@@ -27,4 +32,3 @@ export function SkillMatrix() {
     </section>
   );
 }
-

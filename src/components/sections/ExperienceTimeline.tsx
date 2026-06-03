@@ -12,7 +12,7 @@ export function ExperienceTimeline() {
       />
       <div className="timeline" role="list">
         {profile.experiences.map((experience, index) => (
-          <article className="timeline-item" role="listitem" key={experience.company}>
+          <article className="timeline-item" data-motion="timeline-item" role="listitem" key={experience.company}>
             <div className="timeline-pin" aria-hidden="true">
               {index + 1}
             </div>

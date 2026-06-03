@@ -7,7 +7,7 @@ type SectionHeadingProps = {
 
 export function SectionHeading({ headingId, eyebrow, title, intro }: SectionHeadingProps) {
   return (
-    <div className="section-heading">
+    <div className="section-heading" data-motion="section-heading">
       <p>{eyebrow}</p>
       <h2 id={headingId}>{title}</h2>
       <span>{intro}</span>

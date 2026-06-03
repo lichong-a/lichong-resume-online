@@ -36,6 +36,35 @@ test.describe('personal site smoke validation', () => {
     await page.goto('/');
     await expect(page.getByRole('heading', { level: 1 })).toBeVisible();
     await expect(page.getByRole('heading', { name: '技能不是清单，而是可交付系统' })).toBeVisible();
+
+    if (testInfo.project.name === 'mobile-chrome') {
+      const firstInsight = page.locator('.hero-insight').first();
+      const tooltip = firstInsight.locator('.insight-tooltip');
+
+      await firstInsight.getByRole('button').tap();
+      await expect(tooltip).toContainText('企业级平台全链路交付');
+      await expect.poll(() => tooltip.evaluate((element) => getComputedStyle(element).opacity)).toBe('1');
+
+      const tooltipState = await firstInsight.evaluate((element) => {
+        const tooltipElement = element.querySelector<HTMLElement>('.insight-tooltip');
+        const nextInsight = element.nextElementSibling as HTMLElement | null;
+        const tooltipRect = tooltipElement?.getBoundingClientRect();
+        const nextRect = nextInsight?.getBoundingClientRect();
+        const backgroundColor = tooltipElement ? getComputedStyle(tooltipElement).backgroundColor : '';
+        const alphaMatch = backgroundColor.match(/rgba?\(([^)]+)\)/);
+        const alphaParts = alphaMatch?.[1].split(',').map((part) => Number.parseFloat(part.trim()));
+
+        return {
+          backgroundAlpha: alphaParts && alphaParts.length === 4 ? alphaParts[3] : 1,
+          tooltipBottom: tooltipRect?.bottom ?? 0,
+          nextTop: nextRect?.top ?? Number.POSITIVE_INFINITY,
+        };
+      });
+
+      expect(tooltipState.backgroundAlpha).toBeGreaterThan(0.94);
+      expect(tooltipState.tooltipBottom).toBeLessThanOrEqual(tooltipState.nextTop + 1);
+    }
+
     await expectNoHorizontalOverflow(page);
     await page.screenshot({ path: testInfo.outputPath('mobile-home.png'), fullPage: false });
   });

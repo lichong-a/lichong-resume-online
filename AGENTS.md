@@ -18,14 +18,14 @@ Build and maintain a static personal profile site for 李冲. The site is optimi
 
 ## Standard Commands
 
-- Install dependencies: `npm install`
-- Development server: `npm run dev`
-- Type check: `npm run typecheck`
-- Lint: `npm run lint`
-- Unit/component tests: `npm run test`
-- Production build: `npm run build`
-- Static preview: `npm run preview`
-- End-to-end validation: `npm run test:e2e`
+- Install dependencies: `pnpm install`
+- Development server: `pnpm run dev`
+- Type check: `pnpm run typecheck`
+- Lint: `pnpm run lint`
+- Unit/component tests: `pnpm run test`
+- Production build: `pnpm run build`
+- Static preview: `pnpm run preview`
+- End-to-end validation: `pnpm run test:e2e`
 
 ## File Responsibilities
 
@@ -50,12 +50,12 @@ Build and maintain a static personal profile site for 李冲. The site is optimi
 
 Do not mark work complete until all relevant gates pass:
 
-- `npm run typecheck`
-- `npm run lint`
-- `npm run test`
-- `npm run build`
-- `npm run test:e2e`
-- Preview smoke check via `npm run preview`
+- `pnpm run typecheck`
+- `pnpm run lint`
+- `pnpm run test`
+- `pnpm run build`
+- `pnpm run test:e2e`
+- Preview smoke check via `pnpm run preview`
 - Source/build privacy scan confirms the phone number is absent
 - Desktop and mobile rendered screenshots show no obvious clipping, overlap, unreadable text, or horizontal overflow
 - `prefers-reduced-motion` keeps content complete while reducing animation

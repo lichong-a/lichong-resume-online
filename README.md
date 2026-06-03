@@ -4,13 +4,13 @@
 
 ## Commands
 
-- `npm install` 安装依赖
-- `npm run dev` 本地开发
-- `npm run typecheck` TypeScript 检查
-- `npm run lint` 代码规范检查
-- `npm run test` 单元/组件测试
-- `npm run build` 静态构建
-- `npm run test:e2e` Playwright 端到端验证
+- `pnpm install` 安装依赖
+- `pnpm run dev` 本地开发
+- `pnpm run typecheck` TypeScript 检查
+- `pnpm run lint` 代码规范检查
+- `pnpm run test` 单元/组件测试
+- `pnpm run build` 静态构建
+- `pnpm run test:e2e` Playwright 端到端验证
 
 ## Deploy
 

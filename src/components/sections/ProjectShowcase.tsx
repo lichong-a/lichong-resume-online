@@ -12,7 +12,7 @@ export function ProjectShowcase() {
       />
       <div className="project-grid">
         {profile.projects.map((project, index) => (
-          <article className="project-card" key={project.name}>
+          <article className="project-card" data-motion="project-card" key={project.name}>
             <div className="project-card-topline">
               <span>{project.period}</span>
               <strong>{project.role}</strong>

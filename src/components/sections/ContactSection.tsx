@@ -12,15 +12,15 @@ export function ContactSection() {
           intro="我适合参与 AI 工程化、企业平台、前沿前端、AIOps、低代码和 DevOps 交付体系相关机会。"
         />
         <div className="contact-grid">
-          <a className="contact-link" href={`mailto:${profile.email}`}>
+          <a className="contact-link" data-motion="contact-link" href={`mailto:${profile.email}`}>
             <span>邮箱</span>
             <strong>{profile.email}</strong>
           </a>
-          <a className="contact-link" href={profile.socialUrl} target="_blank" rel="noreferrer">
+          <a className="contact-link" data-motion="contact-link" href={profile.socialUrl} target="_blank" rel="noreferrer">
             <span>社交主页</span>
             <strong>nav-panel.lichong.work</strong>
           </a>
-          <div className="contact-link contact-link-static">
+          <div className="contact-link contact-link-static" data-motion="contact-link">
             <span>教育经历</span>
             <strong>{profile.education}</strong>
           </div>

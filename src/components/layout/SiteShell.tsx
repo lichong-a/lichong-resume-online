@@ -1,5 +1,6 @@
-import { ReactNode } from 'react';
+import { ReactNode, useRef } from 'react';
 import { profile } from '../../content/profile';
+import { useResumeScrollMotion } from '../../motion/useResumeScrollMotion';
 import { ParticleField } from '../ui/ParticleField';
 
 const navItems = [
@@ -10,8 +11,12 @@ const navItems = [
 ];
 
 export function SiteShell({ children }: { children: ReactNode }) {
+  const shellRef = useRef<HTMLDivElement>(null);
+
+  useResumeScrollMotion(shellRef);
+
   return (
-    <div className="site-shell">
+    <div className="site-shell" ref={shellRef}>
       <a className="skip-link" href="#main-content">
         跳到主要内容
       </a>

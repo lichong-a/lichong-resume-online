@@ -6,7 +6,9 @@ export function Hero() {
     <section className="hero-section section-pad" id="top" aria-labelledby="hero-title">
       <div className="hero-copy">
         <p className="hero-kicker">AI-native Full-stack Engineer · Agentic Command Center</p>
-        <h1 id="hero-title">{profile.headline}</h1>
+        <h1 id="hero-title" data-motion="hero-title">
+          {profile.headline}
+        </h1>
         <p className="hero-summary">{profile.summary}</p>
         <div className="hero-insights" aria-label="悬浮信息提示">
           {profile.heroInsights.map((insight, index) => {
@@ -46,7 +48,7 @@ export function Hero() {
           ))}
         </dl>
       </div>
-      <div className="hero-visual-wrap">
+      <div className="hero-visual-wrap" data-motion="hero-visual">
         <TechOrbit />
         <div className="signal-card signal-card-left">
           <span>Current Focus</span>

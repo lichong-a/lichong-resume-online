@@ -13,7 +13,7 @@ export function AgentLoopSection() {
       <div className="loop-board">
         <div className="loop-diagram" aria-hidden="true">
           {profile.agentLoop.map((step, index) => (
-            <div className={`loop-node loop-node-${index + 1}`} key={step.name}>
+            <div className={`loop-node loop-node-${index + 1}`} data-loop-node={index} key={step.name}>
               <span>{step.name}</span>
             </div>
           ))}
@@ -21,7 +21,7 @@ export function AgentLoopSection() {
         </div>
         <div className="loop-copy">
           {profile.agentLoop.map((step, index) => (
-            <article key={step.name} className="loop-step">
+            <article key={step.name} className="loop-step" data-loop-step={index} data-motion="loop-step">
               <span>{String(index + 1).padStart(2, '0')}</span>
               <div>
                 <h3>{step.owner}</h3>

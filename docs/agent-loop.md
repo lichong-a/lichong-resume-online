@@ -31,11 +31,11 @@ Responsibilities:
 
 Required checks:
 
-- `npm run typecheck`
-- `npm run lint`
-- `npm run test`
-- `npm run build`
-- `npm run test:e2e`
+- `pnpm run typecheck`
+- `pnpm run lint`
+- `pnpm run test`
+- `pnpm run build`
+- `pnpm run test:e2e`
 - Source and build privacy scan
 
 Focus areas:
